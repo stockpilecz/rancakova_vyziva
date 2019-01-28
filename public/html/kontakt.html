@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tereza Rancakova</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <div id="navbar" class="animated bounceInDown" >
+
+    <input type="checkbox" id="checkboxMenu"></input>
+
+    <span id="hamburgerSpan1"></span>
+    <span id="hamburgerSpan2"></span>
+    <span id="hamburgerSpan3"></span>
+
+
+    <ul class="menu">
+      <li>
+        <a href="omne.html">O mně</a>
+      </li>
+      <li>
+        <a href="newsfeed.html">Newsfeed</a>
+      </li>
+      <li>
+        <a href="masaze.html">Masáže</a>
+      </li>
+      <li>
+        <a href="vyziva.html">Výživa</a>
+      </li>
+      <li>
+        <a href="#">Kontakt</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mainContainer" id="main">
+    <div class="logoSmallDiv">
+      <img id="logoSmall" src="logo.png" onclick="goHome()">
+    </div>
+    <div class="container">
+      <!-- <h1 class="brand"><span>Tereza</span> Rancakova</h1> -->
+      <h1 class="pageHeader">Kontakt</h1>
+      <div class="wrapper animated bounceInLeft">
+        <div class="company-info">
+          <h3>Tereza Rancakova</h3>
+          <ul>
+            <li><i class="fa fa-road"></i> Bukovno</li>
+            <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+            <li><i class="fa fa-envelope"></i> tereza.rancakova@gmail.com</li>
+          </ul>
+        </div>
+        <div class="contact">
+          <h3>Napište mi</h3> {{msg}}
+          <form method="POST" action="kontakt.html">
+            <p>
+              <label>Jméno a příjmení</label>
+              <input type="text" name="name">
+            </p>
+            <p>
+              <label>Nadpis</label>
+              <input type="text" name="company">
+            </p>
+            <p>
+              <label>Emailová adresa</label>
+              <input type="email" name="email">
+            </p>
+            <p>
+              <label>Telefonní číslo</label>
+              <input type="text" name="phone">
+            </p>
+            <p class="full">
+              <label>Zpráva</label>
+              <textarea name="message" rows="5"></textarea>
+            </p>
+            <p class="full">
+              <button type="submit">Odeslat</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="client.js"></script>
+</body>
+
+</html>

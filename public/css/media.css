@@ -1,0 +1,110 @@
+
+@media only screen and (max-width: 740px) {
+
+  .menu{
+    padding-top: 200px;
+  }
+
+  #navbar input{
+    top: 10px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+  }
+  #hamburgerSpan1, #hamburgerSpan2, #hamburgerSpan3{
+    width: 23px;
+    height: 4px;
+    right: 20px;
+    top: 20px;
+
+  }
+
+
+  #hamburgerSpan2 {
+    top: 27px;
+  }
+
+  #hamburgerSpan3 {
+    top: 34px;
+  }
+
+  #navbar input:checked~#hamburgerSpan1{
+    top: 30.5px;
+    right: 20px;
+    width: 12px;
+    height: 4px;
+  }
+  #navbar input:checked~#hamburgerSpan2{
+    right: 20px;
+    width: 20px;
+  }
+  #navbar input:checked~#hamburgerSpan3{
+    top: 22.4px;
+        right: 20px;
+        width: 12px;
+          height: 4px;
+  }
+
+  #smallHeader{
+    font-size: 22px;
+    height: 58px;
+    line-height: 58px;
+  }
+
+  .menu li {
+    display: block;
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .logoSmallDiv {
+    position: absolute;
+    top:-75px;
+  }
+
+  .pageHeader {
+    font-size: 40px;
+  }
+
+  #tabs{
+    padding: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .box {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+  }
+  .box:hover {
+    box-shadow: 0 0 0 2px;
+  }
+  .box h2{
+    font-size: 9px;
+  }
+  .box:hover h2{
+    font-size: 10px;
+  }
+
+  .active:hover{
+    box-shadow: none;
+  }
+
+  .active:hover h2 {
+    font-size: 9px;
+  }
+
+  #wrapperBoxContent {
+    padding: 15px;
+  }
+  .boxContent {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  #wrapperBoxContent{
+    padding: 5px;
+    padding-top: 10px;
+  }
+}
