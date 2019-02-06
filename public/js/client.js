@@ -2,6 +2,9 @@ var navbar = document.getElementById('navbar');
 var logoSmall = document.getElementById('logoSmall');
 var main = document.getElementById('main');
 var checkboxMenu = document.getElementById('checkboxMenu');
+const tabBar = document.getElementById('tab-bar-border');
+
+console.log(mezr.width(tabBar, 'content'))
 
 // checkboxMenu.checked = true;
 
@@ -66,19 +69,42 @@ function showMenu() {
 //       }
 // }
 
-let smallHeader = document.getElementById('smallHeader');
+const smallHeader = document.getElementById('smallHeader');
 
 
-window.addEventListener('scroll', function()   {
-  if (window.scrollY > 200) {
-    smallHeader.style.opacity = 1;
-  } else{
-    smallHeader.style.opacity = 0;
-  }
+// window.addEventListener('scroll', function()   {
+//   if (window.scrollY > 200) {
+//     smallHeader.style.opacity = 1;
+//   } else{
+//     smallHeader.style.opacity = 0;
+//   }
+// })
+const firstBox = document.getElementById('first-box');
+const firstBoxStyle = mezr.place({
+  element: tabBar,
+  target: firstBox,
+  position: 'left top left bottom',
 })
+const firstWidth = mezr.width(firstBox, 'padding');
+tabBar.style.left = `${firstBoxStyle.left}px`;
+tabBar.style.top = `${firstBoxStyle.top}px`;
+tabBar.style.width = `${firstWidth}px`;
 
 function displayContent(e, masaz) {
 
+ const styleBar = mezr.place({
+    element: tabBar,
+    target: e.currentTarget,
+    position: 'left top left bottom',
+  })
+const targetWidth = mezr.width(e.currentTarget, 'padding');
+  tabBar.style.left = `${styleBar.left}px`;
+  tabBar.style.top = `${styleBar.top}px`;
+  tabBar.style.width = `${targetWidth}px`;
+  // tabBar.style.top = styleBar.top;
+//  tabBar.style.displa
+
+  console.log(tabBar.style);
   let boxContent = document.getElementsByClassName('boxContent');
   for (i = 0; i < boxContent.length;i++){
     boxContent[i].style.display = "none";

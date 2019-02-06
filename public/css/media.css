@@ -1,5 +1,5 @@
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 640px) {
 
   .menu{
     padding-top: 200px;
@@ -19,7 +19,6 @@
 
   }
 
-
   #hamburgerSpan2 {
     top: 27px;
   }
@@ -30,7 +29,7 @@
 
   #navbar input:checked~#hamburgerSpan1{
     top: 30.5px;
-    right: 20px;
+    right: 19.5px;
     width: 12px;
     height: 4px;
   }
@@ -39,10 +38,10 @@
     width: 20px;
   }
   #navbar input:checked~#hamburgerSpan3{
-    top: 22.4px;
-        right: 20px;
-        width: 12px;
-          height: 4px;
+    top: 23.3px;
+    right: 19px;
+    width: 12px;
+    height: 4px;
   }
 
   #smallHeader{
@@ -67,17 +66,15 @@
   }
 
   #tabs{
-    padding: 5px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+   flex-direction: column;
   }
-
   .box {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
+    margin-bottom: 20px;
   }
-  .box:hover {
+  .box:last-child {
+    margin-bottom: 0;
+  }
+  /* .box:hover {
     box-shadow: 0 0 0 2px;
   }
   .box h2{
@@ -93,8 +90,8 @@
 
   .active:hover h2 {
     font-size: 9px;
-  }
-
+  } */
+/* 
   #wrapperBoxContent {
     padding: 15px;
   }
@@ -106,5 +103,5 @@
   #wrapperBoxContent{
     padding: 5px;
     padding-top: 10px;
-  }
+  } */
 }
