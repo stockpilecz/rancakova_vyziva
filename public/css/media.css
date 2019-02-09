@@ -62,46 +62,20 @@
   }
 
   .pageHeader {
-    font-size: 40px;
+    font-size: 60px;
   }
 
   #tabs{
    flex-direction: column;
   }
   .box {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
   .box:last-child {
     margin-bottom: 0;
   }
-  /* .box:hover {
-    box-shadow: 0 0 0 2px;
-  }
-  .box h2{
-    font-size: 9px;
-  }
-  .box:hover h2{
-    font-size: 10px;
-  }
 
-  .active:hover{
-    box-shadow: none;
-  }
-
-  .active:hover h2 {
-    font-size: 9px;
-  } */
-/* 
-  #wrapperBoxContent {
-    padding: 15px;
-  }
   .boxContent {
-    font-size: 12px;
-    padding: 10px;
+    padding: 30px;
   }
-
-  #wrapperBoxContent{
-    padding: 5px;
-    padding-top: 10px;
-  } */
 }

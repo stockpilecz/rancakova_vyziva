@@ -181,8 +181,6 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   width: 100%;
   box-sizing: border-box;
   height: auto;
-
-  /* background-color: rgba(255, 0, 0, 0.5); */
   z-index: 5;
 }
 
@@ -215,14 +213,21 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   position: relative;
 }
 
+.paragraphWrapper {
+  width: 100%;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
 #paragraphMasaze   {
-  max-width: 900px;
-  font-size: 15px;
-  color: white;
-  margin: 0 auto;
-  font-weight: 900;
+  max-width: 1200px;
+  /* font-size: 15px; */
+  color: black;
+  margin: 0;
   padding: 0;
-  margin-bottom: 40px;
   text-align: center;
 }
 #tabsBackground {
@@ -276,26 +281,26 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   display: block;
   width: 100%;
   height: auto;
-  /* background-color: rgba(255, 255, 255, 0.5); */
-  /* padding: 30px; */
-  /* border-radius: 5px; */
   margin-bottom: 20px;
   box-sizing: border-box;
+
 }
 
 .boxContent {
   max-width: 1200px;
   height: auto;
   margin: 0 auto;
-  /* border-radius: 5px; */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: white;
-  box-shadow: 0 6px 9px rgba(0,0,0,0.16), 0 6px 9px rgba(0,0,0,0.23);
-  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 60px;
+  padding-top:40px;
   box-sizing: border-box;
   display: none;
   opacity: 1;
-  /* transition: all .3s ease; */
-  /* animation: grow .5s ease; */
+  transition: all .3s ease;
+  animation: grow .3s ease;
 }
 #boxContent1 {
   display: block;
@@ -306,6 +311,10 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.price {
+  padding-left: 20px;
 }
 
 .massageList {
@@ -500,17 +509,6 @@ ul {
   top: 7%;
   position: relative;
 }
- /* 
-h3 {
-  font-size: 40px;
-  color: white;
-  text-align: center;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin: 0;
-  padding-top: 50px;
-  position: relative;
-} */
 
 .pageDescription, .column > p, .column3 > p, .column2 > p {
   max-width:900px;
