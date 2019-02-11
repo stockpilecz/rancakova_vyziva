@@ -55,7 +55,7 @@ pseudoselekci :checked */
   clear: right;
   top: 30px;
   right: 50px;
-  background: rgba(30, 30, 30, 1);
+  background: rgb(255, 255, 255);
   border-radius: 2.5px;
   z-index: 5;
   -webkit-transform: rotate(0deg);
@@ -67,6 +67,7 @@ pseudoselekci :checked */
   -moz-transition: .40s ease-in-out;
   -o-transition: .40s ease-in-out;
   transition: .40s ease-in-out;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
 /*pozice fixed to dala na jedno misto, tak jsem je musel jednotlive posunout*/
@@ -122,7 +123,7 @@ pseudoselekci :checked */
   margin-top: -100px;
   padding-top: 230px;
   right: 0;
-  background: rgba(80, 170, 158, 0.9);
+  background:  #142657; opacity:0.9;
   list-style-type: none;
   transform-origin: 0% 0%;
   -webkit-transform-origin: 0% 0%;
@@ -153,13 +154,13 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
 .menu a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #d2e0bd;
+  color: #ffffff;
   padding: 10px;
   font-weight: bold;
 }
 
 .menu a:hover {
-  color: #8b542f;
+  color: #b9c4ff;
 }
 
 #navbar input:checked~ul {
@@ -207,7 +208,7 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   font-weight: 900;
   text-transform: uppercase;
   margin: 0 0 20px 0;
-  padding: 0;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -341,10 +342,18 @@ footer {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  //padding: 1em;
+}
+
+.containerContact {
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
+
 }
 
 ul {
@@ -353,17 +362,22 @@ ul {
 }
 
 
-
 .wrapper {
-  box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+  
 }
 
 .wrapper>* {
   padding: 1em;
 }
 
+
 .company-info {
-  background: #c9e6ff;
+  background: #142657; opacity:0.8;
+  color: white;
+   
+ 
+   border: 3px solid #ffffff;
+   margin: 50px;
 }
 
 .company-info h3, .company-info ul {
@@ -371,21 +385,38 @@ ul {
   margin: 0 0 1rem 0;
 }
 
+hr {
+  display: block;
+  height: 3px;
+  border: 0;
+  border-top: 3px solid #fff;
+  margin: 1em 0;
+  padding: 20px;
+}
 .contact {
-  background: #f9feff;
+  background: #142657; opacity:0.8;
+  color:  #ffffff;
+  
+   border: 3px solid #ffffff;
+   font-weight: bold;
+   text-align: center;
 }
 
+.contact h3 {
+  
+}
 /* FORM STYLES */
 
 .contact form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 30px;
+
 }
 
 .contact form label {
   display: block;
-  color: black;
+  color:  #ffffff;
 }
 
 .contact form p {
@@ -396,12 +427,38 @@ ul {
   grid-column: 1 / 3;
 }
 
-
-.contact form button, .contact form input, .contact form textarea {
+.contact form textarea:focus {
+outline: none;
+ }
+ 
+.contact form textarea {
+  color: black;
   width: 100%;
   padding: 1em;
   border: 1px solid #000;
   box-sizing: border-box;
+   
+ }
+ 
+ .contact form button {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #000;
+  box-sizing: border-box;
+     
+   font-weight: bold;
+   color: white;
+}
+.contact form input:focus {
+outline: none;
+ }
+.contact form input {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #000;
+  box-sizing: border-box;
+
+   font-weight: bold;
 }
 
 .contact form textarea {
@@ -409,23 +466,25 @@ ul {
 }
 
 .contact form button {
-  background: #92bde7;
+  background: #142657;
   border: 0;
   text-transform: uppercase;
   cursor: pointer;
+  max-width: 200px;
+  border: 3px solid #ffffff;
 }
 
 .contact form button:hover, .contact form button:focus {
   background: #92bde7;
   color: #fff;
   outline: 0;
-  transition: background-color 2s ease-out;
+  transition: background-color 0.5s ease-out;
 }
 
 @media(min-width:930px){
     .row {
       align-items: baseline;
-      padding-top: 50px;
+      padding-top: 20px;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -433,8 +492,10 @@ ul {
       display: flex;
       /* max-height: 800px; */
       justify-content: center;
-      width: 100%;
-      margin-bottom: 50px;
+      max-width: 100%;
+      margin-top: 30px;
+	  color: #142657;
+	  background: white;
     }
   
     .row2 {
@@ -446,7 +507,7 @@ ul {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      padding: 30px;
+      padding: 50px;
   }
  }
  
@@ -459,9 +520,18 @@ ul {
      align-items: center;
      justify-content: center;
  }
- 
+ .row4 {
+     display: -webkit-box;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
  .column {
    margin-right: 50px;
+   margin-bottom: 20px;
  } 
  
  .no-margin-column {
@@ -471,7 +541,16 @@ ul {
  .column2 {
    flex: 50%;
  }
- 
+ .column2 > h2 {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+  top: 7%;
+  position: relative;
+}
  .column3 {
      color: white;
      font-weight: bold;
@@ -481,9 +560,29 @@ ul {
     margin: 20px;
  }
  
-.column > h2, .column2 > h2 {
+  .column4 {
+     background: white;
+	 color: #142657;
+     font-weight: bold;
+     font-size: 2em;
+     text-align: center;
+     width: 100%;
+ }
+ 
+  .column4 > h2 {
   font-size: 40px;
-  color: white;
+  color: #142657;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 10px;
+  top: 7%;
+  position: relative;
+}
+ 
+.column > h2 {
+  font-size: 40px;
+  color: #142657;
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
@@ -503,7 +602,31 @@ h3 {
   position: relative;
 } */
 
-.pageDescription, .column > p, .column3 > p, .column2 > p {
+.column > p{
+  max-width:900px;
+  font-size: 25px;
+  color: #142657;
+  margin: 0 auto;
+  font-weight: 900;
+  position: relative;
+  text-align: center;
+  top: 7%;
+}
+
+.column4 > p{
+  max-width: 600px;
+  font-size: 25px;
+  color: #142657;
+  margin: 0 auto;
+  font-weight: 900;
+  position: relative;
+  text-align: center;
+  top: 7%;
+  padding-bottom: 20px;
+}
+
+
+.column3 > p, .column2 > p {
   max-width:900px;
   font-size: 25px;
   color: white;
@@ -512,4 +635,16 @@ h3 {
   position: relative;
   text-align: center;
   top: 7%;
+}
+
+.pageDescription {
+  max-width:900px;
+  font-size: 25px;
+  color: white;
+  margin: 0 auto;
+  font-weight: 900;
+  position: relative;
+  text-align: center;
+  top: 7%;
+  padding-bottom: 60px;
 }
