@@ -14,6 +14,10 @@ body {
   min-height: 100vh;
 }
 
+p {
+  line-height: 25px;
+}
+
 /*zacina sekce pro menu*/
 
 #navbar {
@@ -160,6 +164,7 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   color: #d2e0bd;
   padding: 10px;
   font-weight: bold;
+  /* opacity: 0; */
 }
 
 .menu a:hover {
@@ -255,7 +260,7 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   /* width: 100px; */
   height: 5px;
   background-color: #fff;
-  /* left:0; */
+  display: none;
   transition: all 0.2s ease-in-out;
 }
 
@@ -286,6 +291,7 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
 
 }
 
+
 .boxContent {
   max-width: 1200px;
   height: auto;
@@ -302,6 +308,11 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   transition: all .3s ease;
   animation: grow .3s ease;
 }
+
+.vyzivaContent {
+  display: block;
+}
+
 #boxContent1 {
   display: block;
 }
@@ -324,6 +335,10 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   margin-top: 50px;
 }
 
+.active {
+  border-bottom: solid 5px #fff;
+}
+
 .active:hover{
   box-shadow: none;
   cursor: default;
@@ -339,7 +354,7 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   }
   1% {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.99);
   }
   100% {
     opacity: 1;
