@@ -329,7 +329,7 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   margin: 0 auto;
   /* border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px; */
-  border-radius: 5px;
+  border-radius: 5pvx;
   background-color: white;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   padding: 60px;
@@ -343,9 +343,11 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
 
 .vyzivaContent {
   display: block;
+}
+
+.justContent {
   display: flex;
   flex-direction: row;
-
 }
 
 
