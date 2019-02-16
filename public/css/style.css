@@ -218,7 +218,10 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   font-weight: 900;
   text-transform: uppercase;
   margin: 0;
+<<<<<<< HEAD
   padding-left: 30px;
+=======
+>>>>>>> eba81d47b5cce2ebdffecf5ee5706cdc3772216a
   padding-bottom: 30px;
   position: relative;
 }
@@ -550,11 +553,12 @@ outline: none;
       display: -webkit-flex;
       display: flex;
       /* max-height: 800px; */
-      justify-content: center;
-      max-width: 100%;
-      margin-top: 30px;
+      justify-content: space-between;
 	  color: #142657;
-	  background: white;
+    background: white;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 40px;
     }
   
     .row2 {
@@ -590,10 +594,14 @@ outline: none;
      justify-content: center;
  }
  .column {
-   margin-right: 50px;
-   margin-bottom: 20px;
- } 
+ margin: 10px;
  
+ } 
+.column > img {
+  margin: 10px;
+  max-width: 270px;
+  } 
+
  .no-margin-column {
    margin-right: 0;
  }
@@ -602,17 +610,14 @@ outline: none;
    flex: 50%;
  }
  .column2 > h2 {
-  font-size: 40px;
+  font-size: 30px;
   color: white;
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
-  margin: 0;
-  top: 7%;
   position: relative;
 }
  .column3 {
-    max-width: 1200px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -627,10 +632,14 @@ outline: none;
 .column3 > div{
   max-width: 200px;
   max-height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .column3 > div > img{
   width: 100%;
   padding-right: 80px;
+ 
+  
 }
 
   .column4 {
@@ -654,7 +663,7 @@ outline: none;
 }
  
 .column > h2 {
-  font-size: 40px;
+  font-size: 25px;
   color: #142657;
   text-align: center;
   font-weight: 900;
@@ -665,8 +674,8 @@ outline: none;
 }
 
 .column > p{
-  max-width:900px;
-  font-size: 25px;
+  
+  font-size: 18px;
   color: #142657;
   margin: 0 auto;
   font-weight: 900;
