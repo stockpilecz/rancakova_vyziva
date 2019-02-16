@@ -592,16 +592,6 @@ outline: none;
   position: relative;
 }
  .column3 {
-<<<<<<< HEAD
-     color: white;
-     font-weight: bold;
-     font-size: 2em;
-     text-align: center;
-     /* max-width: 600px; */
-     margin: 20px;
-     display: flex;
-     flex-direction: row;
-=======
     max-width: 1200px;
     display: -webkit-box;
     display: -moz-box;
@@ -613,7 +603,6 @@ outline: none;
     justify-content: center;
     padding-bottom: 80px;
 
->>>>>>> Simon
  }
 .column3 > div{
   max-width: 200px;
