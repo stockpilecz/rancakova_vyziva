@@ -3,6 +3,7 @@ var logoSmall = document.getElementById('logoSmall');
 var main = document.getElementById('main');
 var checkboxMenu = document.getElementById('checkboxMenu');
 const tabBar = document.getElementById('tab-bar-border');
+const tabs = document.getElementById('tabs');
 
 //funcke na presmerovani po kliknuti na male logo na stranku o omne
 function goHome() {
@@ -46,6 +47,8 @@ function displayContent(e, masaz) {
     box[i].className = box[i].className.replace(" active", "");
   }
 
-  document.getElementById(masaz).style.display = "block";
+  const masazID = document.getElementById(masaz);
+  masazID.style.display = "block";
+  tabs.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   e.currentTarget.className += " active";
 }
