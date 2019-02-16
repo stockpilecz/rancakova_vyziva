@@ -556,7 +556,8 @@ outline: none;
      display: -ms-flexbox;
      display: -webkit-flex;
      display: flex;
-     align-items: center;
+     flex-wrap: nowrap;
+     flex-direction: row;
      justify-content: center;
  }
  .row4 {
@@ -591,6 +592,7 @@ outline: none;
   position: relative;
 }
  .column3 {
+<<<<<<< HEAD
      color: white;
      font-weight: bold;
      font-size: 2em;
@@ -599,8 +601,29 @@ outline: none;
      margin: 20px;
      display: flex;
      flex-direction: row;
+=======
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 80px;
+
+>>>>>>> Simon
  }
- 
+.column3 > div{
+  max-width: 200px;
+  max-height: 200px;
+}
+.column3 > div > img{
+  width: 100%;
+  padding-right: 80px;
+}
+
   .column4 {
      background: white;
 	 color: #142657;
@@ -644,7 +667,7 @@ outline: none;
 }
 
 .column4 > p{
-  max-width: 600px;
+  max-width: 900px;
   font-size: 25px;
   color: #142657;
   margin: 0 auto;
@@ -655,23 +678,23 @@ outline: none;
   padding-bottom: 20px;
 }
 
-
 .column3 > p, .column2 > p {
-  max-width:900px;
-  font-size: 25px;
+  padding-left: 50px;
+  max-width: 650px;
+  font-size: 20px;
   color: white;
   margin: 0 auto;
-  font-weight: 900;
+  font-weight: 700;
   position: relative;
-  text-align: center;
-  top: 7%;
+  text-align: left;
+  padding-top: 30px;
+  
 }
 
 .pageDescription {
   max-width:900px;
   font-size: 25px;
   color: white;
-  margin: 0 auto;
   font-weight: 900;
   position: relative;
   text-align: center;
