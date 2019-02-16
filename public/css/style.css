@@ -544,7 +544,7 @@ outline: none;
 }
 
 
-@media(min-width:930px){
+/* @media(min-width:930px){ */
     .row {
       align-items: baseline;
     
@@ -577,8 +577,12 @@ outline: none;
       align-items: center;
       justify-content: space-around;
       padding: 30px;
-      border: 15px white solid;
+      border: 20px white solid;
       box-sizing: border-box;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
       
      
   }
@@ -609,8 +613,8 @@ outline: none;
  .column {
  margin: 10px;
  max-width: 1200px;
- padding-top: 37px;
- padding-bottom: 37px;
+ padding-top: 27px;
+ padding-bottom: 27px;
  border-radius: 5px;
  
  } 
@@ -626,6 +630,7 @@ outline: none;
  .column2 {
    flex: 50%;
    max-width: 1200px;
+  
  }
  .column2 > h2 {
   font-size: 30px;
@@ -647,8 +652,8 @@ outline: none;
     justify-content: center;
     padding-bottom: 80px;
     box-shadow: none;
-   border-bottom-left-radius: 0;
-   border-bottom-right-radius: 0;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
    border-top-left-radius: 5px;
    border-top-right-radius: 5px;
    
@@ -683,6 +688,8 @@ outline: none;
      width: 100%;
      border-bottom-left-radius: 5px;
      border-bottom-right-radius: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
  }
  
   .column4 > h2 {
@@ -802,7 +809,7 @@ outline: none;
   flex-shrink: 0;
  
   border-radius: 10px;
- box-sizing: border-box;
+  box-sizing: border-box;
   transform-origin: center center;
   transform: scale(1);
   transition: transform 0.5s;
@@ -845,20 +852,26 @@ outline: none;
   border-radius: 50%;
   margin: 0 0 0.5rem 0;
   position: relative;
+  color: #142657;
 }
-.slider > a:active {
-  top: 1px;
-}
-.slider > a:focus {
-  background: #000;
-}
-*{box-sizing: border-box;
- }
+.slider > a:hover{
+  background: #142657;
+  color: white;
 
-/* Don't need button navigation */
+}
+
+.slider > a:active {
+  top: 2px;
+}
+/* .slider > a:focus {
+  background: #000; */
+}
+
+/* 
+Don't need button navigation
 @supports (scroll-snap-type) {
   .slider > a {
     display: none;
   }
 }
-
+ */
