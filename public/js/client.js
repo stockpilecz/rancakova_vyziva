@@ -11,32 +11,11 @@ function goHome() {
 }
 
 
-function showMenu() {
-  document.getElementsByClassName('druhyMenu')[0].style.opacity = 1;
-}
-
-const firstBox = document.getElementById('first-box');
-const firstBoxStyle = mezr.place({
-  element: tabBar,
-  target: firstBox,
-  position: 'left top left bottom',
-})
-const firstWidth = mezr.width(firstBox, 'padding');
-tabBar.style.left = firstBoxStyle.left + "px";
-tabBar.style.top = firstBoxStyle.top + "px";
-tabBar.style.width = firstWidth + "px";
+// function showMenu() {
+//   document.getElementsByClassName('druhyMenu')[0].style.opacity = 1;
+// }
 
 function displayContent(e, masaz) {
-
-  const styleBar = mezr.place({
-    element: tabBar,
-    target: e.currentTarget,
-    position: 'left top left bottom',
-  })
-  const targetWidth = mezr.width(e.currentTarget, 'padding');
-  tabBar.style.left = styleBar.left + "px";
-  tabBar.style.top = styleBar.top + "px";
-  tabBar.style.width = targetWidth + "px";
 
   let boxContent = document.getElementsByClassName('boxContent');
   for (i = 0; i < boxContent.length;i++){
@@ -46,8 +25,8 @@ function displayContent(e, masaz) {
   for (i = 0; i < box.length; i++) {
     box[i].className = box[i].className.replace(" active", "");
   }
-
   const masazID = document.getElementById(masaz);
+
   masazID.style.display = "block";
   tabs.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   e.currentTarget.className += " active";

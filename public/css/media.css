@@ -78,4 +78,8 @@
   .boxContent {
     padding: 30px;
   }
+
+  .paragraphWrapper {
+    flex-direction: column-reverse;
+  }
 }
