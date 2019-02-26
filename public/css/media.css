@@ -172,6 +172,10 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
 
 /*konci sekce pro menu*/
 
+  .secondContainer {
+    padding: 10px;
+  }
+
   .masazeImgDiv {
     min-width: 250px;
     width: 250px;
@@ -198,5 +202,6 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
 
   .paragraphWrapperBorder {
     flex-direction: column-reverse;
+    padding: 20px;
   }
 }
