@@ -1,65 +1,182 @@
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 800px) {
 
-  .menu{
-    padding-top: 200px;
-  }
-/* 
-  #navbar input{
-    top: 10px;
-    right: 14px;
-    width: 30px;
-    height: 30px;
-  }
-  #hamburgerSpan1, #hamburgerSpan2, #hamburgerSpan3{
-    width: 23px;
-    height: 4px;
-    right: 20px;
-    top: 20px;
+  /*zacina sekce pro menu*/
 
+  #navbar-web {
+    display: none;
   }
 
-  #hamburgerSpan2 {
-    top: 27px;
-  }
+#navbar-mobile {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 6;
+  display: block;
+}
 
-  #hamburgerSpan3 {
-    top: 34px;
-  }
+/* input je checkbox, ktery ma pozici 3 a opacity 0
+takze je zobrazen v popredi a ridi interakci
+pseudoselekci :checked */
 
-  #navbar input:checked~#hamburgerSpan1{
-    top: 30.5px;
-    right: 19.5px;
-    width: 12px;
-    height: 4px;
-  }
-  #navbar input:checked~#hamburgerSpan2{
-    right: 20px;
-    width: 20px;
-  }
-  #navbar input:checked~#hamburgerSpan3{
-    top: 23.3px;
-    right: 19px;
-    width: 12px;
-    height: 4px;
-  }
+#navbar-mobile input {
+  display: block;
+  width: 50px;
+  height: 35px;
+  position: fixed;
+  float: right;
+  clear: right;
+  top: 25px;
+  right: 40px;
+  opacity: 0;
+  z-index: 7;
+  cursor: pointer;
+}
 
-  #smallHeader{
-    font-size: 22px;
-    height: 58px;
-    line-height: 58px;
-  }
+/* vykresleni hamburger menu a jeho animace */
 
-  .menu li {
-    display: block;
-    font-size: 22px;
-    text-align: center;
-    padding-bottom: 20px;
+#hamburgerSpan1, #hamburgerSpan2, #hamburgerSpan3 {
+  display: block;
+  width: 33px;
+  height: 4.5px;
+  position: fixed;
+  float: right;
+  clear: right;
+  top: 30px;
+  right: 50px;
+  background: rgb(255, 255, 255);
+  border-radius: 2.5px;
+  border: solid #142657 5px;
+  z-index: 5;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  /* tohle jsou transition duration pro vsechny zmeny*/
+  -webkit-transition: .40s ease-in-out;
+  -moz-transition: .40s ease-in-out;
+  -o-transition: .40s ease-in-out;
+  transition: .40s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.6);
+}
+
+/*pozice fixed to dala na jedno misto, tak jsem je musel jednotlive posunout*/
+
+#hamburgerSpan2 {
+  top: 39px;
+}
+
+#hamburgerSpan3 {
+  top: 49px;
+}
+
+#navbar-mobile input:checked~#hamburgerSpan1 {
+  top: 44px;
+  right: 48px;
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  border-radius: 6px;
+  height: 5px;
+  width:16px;
+  box-shadow: none;
+  border: none;
+}
+
+/*sjede do pravy prdele a zmizi prdele*/
+
+#navbar-mobile input:checked~#hamburgerSpan2 {
+  right: 49.5px;
+  width: 28px;
+  /* transform-origin: 10px 0px; */
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  box-shadow: none;
+  border: none;
+}
+
+#navbar-mobile input:checked~#hamburgerSpan3 {
+  top: 34px;
+    right: 47.8px;
+  -webkit-transform: rotate(-315deg);
+  -moz-transform: rotate(-315deg);
+  -o-transform: rotate(-315deg);
+  transform: rotate(-315deg);
+  height: 5px;
+  border-radius: 6px;
+  width: 16px;
+  box-shadow: none;
+  border: none;
+}
+
+
+
+.menu-mobile {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-top: -100px;
+  padding-top: 230px;
+  right: 0;
+  background: rgba(20, 38, 87, 1);
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  transform: translate( 100%, -0%);
+  -webkit-transform: translate( 100%, -0%);
+  -moz-transform: translate( 100%, -0%);
+  -o-transform: translate( 100%, -0%);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  -webkit-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  -moz-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  text-align: center;
+  z-index: 3;
+}
+
+/*pozice itemu vuci hamburgeru je nyni presne dana
+pokud se zvetsi napr. font musi se pozicovani predelat*/
+
+.menu-mobile li {
+  font-size: 30px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 30px;
+}
+
+.menu-mobile a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px;
+  font-weight: bold;
+  /* opacity: 0; */
+}
+
+.menu-mobile a:hover {
+  color: #b9c4ff;
+}
+
+#navbar-mobile input:checked~ul {
+  transform: none;
+  /*cely menu-mobile je posunuto transformaci -100%,
+  checknuti checkboxu transformaci zrusi a menu sjede*/
+}
+
+/*konci sekce pro menu*/
+
+  .masazeImgDiv {
+    min-width: 250px;
+    width: 250px;
+    height: 250px;
   }
-  .logoSmallDiv {
-    position: absolute;
-    top:-75px;
-  } */
 
   .pageHeader {
     font-size: 60px;
@@ -79,7 +196,7 @@
     padding: 30px;
   }
 
-  .paragraphWrapper {
+  .paragraphWrapperBorder {
     flex-direction: column-reverse;
   }
 }
