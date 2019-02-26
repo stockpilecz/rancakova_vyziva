@@ -1,18 +1,9 @@
-/* @import url('https://fonts.googleapis.com/css?family=Montserrat&subset=latin-ext'); */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&subset=cyrillic,cyrillic-ext,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Merienda:400,700&subset=latin-ext');
 
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
-}
-
-body {
-  background-image: url("../img/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;  /* parallax efekt*/
+  font-family: 'Merienda', sans-serif;
   min-height: 100vh;
 }
 
@@ -20,166 +11,48 @@ p {
   line-height: 25px;
 }
 
-/*zacina sekce pro menu*/
+#navbar-mobile {
+  display: none;
+}
 
-#navbar {
-  margin: 0;
-  padding: 0;
-  display: block;
-  position: fixed;
+#navbar-web {
   width: 100%;
-  z-index: 6;
-  display: block;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
 
-/* input je checkbox, ktery ma pozici 3 a opacity 0
-takze je zobrazen v popredi a ridi interakci
-pseudoselekci :checked */
-
-#navbar input {
-  display: block;
-  width: 50px;
-  height: 35px;
-  position: fixed;
-  float: right;
-  clear: right;
-  top: 25px;
-  right: 40px;
-  opacity: 0;
-  z-index: 7;
-  cursor: pointer;
-}
-
-/* vykresleni hamburger menu a jeho animace */
-
-#hamburgerSpan1, #hamburgerSpan2, #hamburgerSpan3 {
-  display: block;
-  width: 33px;
-  height: 4.5px;
-  position: fixed;
-  float: right;
-  clear: right;
-  top: 30px;
-  right: 50px;
-  background: rgb(255, 255, 255);
-  border-radius: 2.5px;
-  z-index: 5;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  /* tohle jsou transition duration pro vsechny zmeny*/
-  -webkit-transition: .40s ease-in-out;
-  -moz-transition: .40s ease-in-out;
-  -o-transition: .40s ease-in-out;
-  transition: .40s ease-in-out;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.6);
-}
-
-/*pozice fixed to dala na jedno misto, tak jsem je musel jednotlive posunout*/
-
-#hamburgerSpan2 {
-  top: 39px;
-}
-
-#hamburgerSpan3 {
-  top: 49px;
-}
-
-#navbar input:checked~#hamburgerSpan1 {
-  top: 44px;
-  right: 48px;
-  -webkit-transform: rotate(315deg);
-  -moz-transform: rotate(315deg);
-  -o-transform: rotate(315deg);
-  transform: rotate(315deg);
-  border-radius: 6px;
-  height: 5px;
-  width:16px;
-  box-shadow: none;
-}
-
-/*sjede do pravy prdele a zmizi prdele*/
-
-#navbar input:checked~#hamburgerSpan2 {
-  right: 49.5px;
-  width: 28px;
-  /* transform-origin: 10px 0px; */
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  transform: rotate(360deg);
-  box-shadow: none;
-}
-
-#navbar input:checked~#hamburgerSpan3 {
-  top: 34px;
-    right: 47.8px;
-  -webkit-transform: rotate(-315deg);
-  -moz-transform: rotate(-315deg);
-  -o-transform: rotate(-315deg);
-  transform: rotate(-315deg);
-  height: 5px;
-  border-radius: 6px;
-  width: 16px;
-  box-shadow: none;
-}
-
-.menu {
-  position: fixed;
+.menu-web {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  height: 100%;
-  margin-top: -100px;
-  padding-top: 230px;
-  right: 0;
-  background: rgba(20, 38, 87, 1);
   list-style-type: none;
-  transform-origin: 0% 0%;
-  -webkit-transform-origin: 0% 0%;
-  -moz-transform-origin: 0% 0%;
-  -o-transform-origin: 0% 0%;
-  transform: translate( 100%, -0%);
-  -webkit-transform: translate( 100%, -0%);
-  -moz-transform: translate( 100%, -0%);
-  -o-transform: translate( 100%, -0%);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  -webkit-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  -moz-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
   text-align: center;
   z-index: 3;
+  justify-content: center;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-/*pozice itemu vuci hamburgeru je nyni presne dana
-pokud se zvetsi napr. font musi se pozicovani predelat*/
-
-.menu li {
-  font-size: 30px;
-  margin-left: 10px;
-  display: block;
-  padding-bottom: 30px;
-}
-
-.menu a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
-  padding: 10px;
+.menu-active {
+  border-bottom: 5px solid #142657;
+  border-radius: 5px;
   font-weight: bold;
-  /* opacity: 0; */
 }
 
-.menu a:hover {
-  color: #b9c4ff;
+.menu-web > li {
+  padding-left: 18px;
+  padding-right: 18px;
+  text-decoration: none;
+  color: #142657;
 }
 
-#navbar input:checked~ul {
-  transform: none;
-  /*cely menu je posunuto transformaci -100%,
-  checknuti checkboxu transformaci zrusi a menu sjede*/
+.menu-web > li > a {
+  text-decoration: none;
+  color: #142657;
+  font-size: 22px;
 }
-
-/*konci sekce pro menu*/
 
 .logoSmallDiv {
   position: fixed;
@@ -202,10 +75,10 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
 
 .mainContainer {
   min-height: calc(100vh - 61px);
-  padding-top: 80px;
+  padding-top: 40px;
   width: 100%;
   box-sizing: border-box;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   text-align: left;
 }
@@ -217,32 +90,36 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   text-align: left;
   font-weight: 900;
   text-transform: uppercase;
-  margin: 0;
-<<<<<<< HEAD
+  margin: 0 auto;
   padding-left: 30px;
-=======
->>>>>>> eba81d47b5cce2ebdffecf5ee5706cdc3772216a
   padding-bottom: 30px;
   position: relative;
 }
 
 .paragraphWrapper {
-  width: 100%;
-  background-color: #fff;
-  padding: 50px;
-  display: flex;
-  justify-content: center;
+  border: solid #fff 8px;
+  margin: 0 auto;
+  max-width: 1200px;
   box-sizing: border-box;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
+}
+
+.paragraphWrapperBorder {
+  max-width: 1200px;
+  border: solid #142657 8px;
+  background-color: rgba(255,255,255,0.85);
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;  
+  justify-content: space-between; 
+  margin: 0 auto;
+
 }
 
 #paragraphMasaze   {
   max-width: 1200px;
-  /* font-size: 15px; */
   color: black;
   margin: 0;
   padding: 0;
@@ -254,7 +131,6 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
 
 .masazeImgDiv {
   min-width: 300px;
-  /* max-width: 300px; */
   width: 300px;
   height: 300px;
   position: relative;
@@ -274,10 +150,11 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
 
 #tabs {
   display: flex;
-  background-color: #142657;
-  max-width: 1200px;
+  color: #142657;
+  background-color: #fff;
   padding: 30px;
-  margin: 0 auto;
+  margin: 10px;
+  border-radius: 10px;
   box-sizing: border-box;
   flex-direction: row;
   flex-wrap: wrap;
@@ -286,16 +163,7 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   height: auto;
   align-items: center;
   box-sizing: border-box;
-  border: 15px solid white;
-}
-
-#tab-bar-border {
-  position: absolute;
-  /* width: 100px; */
-  height: 5px;
-  background-color: #fff;
-  display: none;
-  transition: all 0.2s ease-in-out;
+  border: 3px solid #142657;
 }
 
 .box {
@@ -313,7 +181,7 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   margin: 0;
   padding: 0;
   font-size: 26px;
-  color: white;
+  /* color: white; */
 }
 
 #wrapperBoxContent {
@@ -333,7 +201,7 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: white;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
   padding: 60px;
   padding-top:40px;
   box-sizing: border-box;
@@ -370,7 +238,8 @@ pokud se zvetsi napr. font musi se pozicovani predelat*/
 }
 
 .active {
-  border-bottom: solid 5px #fff;
+  border-bottom: solid 5px #142657;
+  border-radius: 5px;
 }
 
 .active:hover{
@@ -541,6 +410,14 @@ outline: none;
   color: #fff;
   outline: 0;
   transition: background-color 0.5s ease-out;
+}
+.secondContainer {
+  min-height: 100%;
+  border-radius: 10px;
+  margin: 10px;
+  background-image: url("../img/background.jpg");
+  padding: 50px;
+  box-sizing: border-box;
 }
 
 
