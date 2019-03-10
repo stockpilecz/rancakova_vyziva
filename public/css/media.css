@@ -1,110 +1,315 @@
 
-@media only screen and (max-width: 740px) {
-
-  .menu{
-    padding-top: 200px;
-  }
-
-  #navbar input{
-    top: 10px;
-    right: 14px;
-    width: 30px;
-    height: 30px;
-  }
-  #hamburgerSpan1, #hamburgerSpan2, #hamburgerSpan3{
-    width: 23px;
-    height: 4px;
-    right: 20px;
-    top: 20px;
-
-  }
+@media only screen and (max-width: 800px) {
 
 
-  #hamburgerSpan2 {
-    top: 27px;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Merienda', sans-serif;
+  min-height: 100vh;
+  transform: scale(1);
+  transform-origin: 1 1;
+}
+  /*zacina sekce pro menu*/
+
+  #navbar-web {
+    display: none;
   }
 
-  #hamburgerSpan3 {
-    top: 34px;
-  }
+#navbar-mobile {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 6;
+  display: block;
+}
 
-  #navbar input:checked~#hamburgerSpan1{
-    top: 30.5px;
-    right: 20px;
-    width: 12px;
-    height: 4px;
-  }
-  #navbar input:checked~#hamburgerSpan2{
-    right: 20px;
-    width: 20px;
-  }
-  #navbar input:checked~#hamburgerSpan3{
-    top: 22.4px;
-        right: 20px;
-        width: 12px;
-          height: 4px;
-  }
+/* input je checkbox, ktery ma pozici 3 a opacity 0
+takze je zobrazen v popredi a ridi interakci
+pseudoselekci :checked */
 
-  #smallHeader{
-    font-size: 22px;
-    height: 58px;
-    line-height: 58px;
-  }
+#navbar-mobile input {
+  display: block;
+  width: 50px;
+  height: 35px;
+  position: fixed;
+  float: right;
+  clear: right;
+  top: 25px;
+  right: 40px;
+  opacity: 0;
+  z-index: 7;
+  cursor: pointer;
+}
 
-  .menu li {
-    display: block;
-    font-size: 22px;
-    text-align: center;
-    padding-bottom: 20px;
-  }
-  .logoSmallDiv {
-    position: absolute;
-    top:-75px;
-  }
+/* vykresleni hamburger menu a jeho animace */
 
-  .pageHeader {
-    font-size: 40px;
-  }
+#hamburgerSpan1, #hamburgerSpan2, #hamburgerSpan3 {
+  display: block;
+  width: 33px;
+  height: 4.5px;
+  position: fixed;
+  float: right;
+  clear: right;
+  top: 30px;
+  right: 50px;
+  background: rgb(255, 255, 255);
+  border-radius: 2.5px;
+  border: solid #142657 5px;
+  z-index: 5;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  /* tohle jsou transition duration pro vsechny zmeny*/
+  -webkit-transition: .40s ease-in-out;
+  -moz-transition: .40s ease-in-out;
+  -o-transition: .40s ease-in-out;
+  transition: .40s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.6);
+}
 
-  #tabs{
-    padding: 5px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+/*pozice fixed to dala na jedno misto, tak jsem je musel jednotlive posunout*/
 
-  .box {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-  }
-  .box:hover {
-    box-shadow: 0 0 0 2px;
-  }
-  .box h2{
-    font-size: 9px;
-  }
-  .box:hover h2{
-    font-size: 10px;
-  }
+#hamburgerSpan2 {
+  top: 39px;
+}
 
-  .active:hover{
-    box-shadow: none;
-  }
+#hamburgerSpan3 {
+  top: 49px;
+}
 
-  .active:hover h2 {
-    font-size: 9px;
-  }
+#navbar-mobile input:checked~#hamburgerSpan1 {
+  top: 44px;
+  right: 48px;
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  border-radius: 6px;
+  height: 5px;
+  width:16px;
+  box-shadow: none;
+  border: none;
+}
 
-  #wrapperBoxContent {
-    padding: 15px;
-  }
-  .boxContent {
-    font-size: 12px;
+/*sjede do pravy prdele a zmizi prdele*/
+
+#navbar-mobile input:checked~#hamburgerSpan2 {
+  right: 49.5px;
+  width: 28px;
+  /* transform-origin: 10px 0px; */
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  box-shadow: none;
+  border: none;
+}
+
+#navbar-mobile input:checked~#hamburgerSpan3 {
+  top: 34px;
+    right: 47.8px;
+  -webkit-transform: rotate(-315deg);
+  -moz-transform: rotate(-315deg);
+  -o-transform: rotate(-315deg);
+  transform: rotate(-315deg);
+  height: 5px;
+  border-radius: 6px;
+  width: 16px;
+  box-shadow: none;
+  border: none;
+}
+
+
+
+.menu-mobile {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-top: -100px;
+  padding-top: 230px;
+  right: 0;
+  background: rgba(20, 38, 87, 1);
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  transform: translate( 100%, -0%);
+  -webkit-transform: translate( 100%, -0%);
+  -moz-transform: translate( 100%, -0%);
+  -o-transform: translate( 100%, -0%);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  -webkit-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  -moz-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  text-align: center;
+  z-index: 3;
+}
+
+/*pozice itemu vuci hamburgeru je nyni presne dana
+pokud se zvetsi napr. font musi se pozicovani predelat*/
+
+.menu-mobile li {
+  font-size: 30px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 30px;
+}
+
+.menu-mobile a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px;
+  font-weight: bold;
+  /* opacity: 0; */
+}
+
+.menu-mobile a:hover {
+  color: #b9c4ff;
+}
+
+#navbar-mobile input:checked~ul {
+  transform: none;
+  /*cely menu-mobile je posunuto transformaci -100%,
+  checknuti checkboxu transformaci zrusi a menu sjede*/
+}
+
+/*konci sekce pro menu*/
+
+  .secondContainer {
     padding: 10px;
   }
 
-  #wrapperBoxContent{
-    padding: 5px;
-    padding-top: 10px;
+  .masazeImgDiv {
+    min-width: 250px;
+    width: 250px;
+    height: 250px;
   }
+
+  .pageHeader {
+    font-size: 60px;
+  }
+
+  #tabs{
+   flex-direction: column;
+  }
+  .box {
+    margin-bottom: 25px;
+  }
+  .box:last-child {
+    margin-bottom: 0;
+  }
+
+  .boxContent {
+    padding: 30px;
+  }
+
+  .paragraphWrapperBorder {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  
+  .row {
+      align-items: baseline;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+	  -webkit-flex-wrap: wrap;
+      display: flex;
+	  flex-wrap: wrap;
+      justify-content: space-between;
+	  color: #142657;
+	  heigh: 8vh;
+	  padding-top: 80px;
+	  max-width: 50vh;
+	  padding-left: 0px;
+	  padding-right: 0px;
+  }
+  
+   .row3 {
+     display: -webkit-box;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+	  -webkit-flex-wrap: wrap;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     justify-content: center;
+     padding-top:20px;
+	 max-width: 50vh;
+ }
+ .column3 {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+	  -webkit-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: none;
+    padding-top:80px;
+    }
+	.column > img {
+  margin: 10px;
+  max-width: 270px;
+  } 
+  
+.column3 > p {
+    /* padding-left: 50px; */
+    font-size: 20px;
+    color: black;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    padding-top: 30px;
+    font-weight: 700;
+}
+
+ .column2 {
+   flex: 50%;
+   max-width: 1000px;
+   padding-top: 80px;
+  
+ }
+
+    .profilovka {
+      min-width: 250px;
+      width: 250px;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    
+    .profilovka > img {
+      margin: 0 auto;
+      height: 100%;
+      width: auto;
+    }
+	
+.pageDescription {
+  font-size: 25px;
+ 
+  
+  text-align: center;
+  top: 7%;
+  padding-bottom: 30px;
+}
+
+.column {
+
+
+}
 }

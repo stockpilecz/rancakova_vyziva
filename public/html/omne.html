@@ -3,40 +3,70 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tereza Rancakova</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/header.css">
+   
   <link rel="stylesheet" href="../css/media.css">
   <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/swiper.min.css">
+  
+    <style>
+
+    .swiper-container {
+      max-width: 1200px;
+
+	        border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+    }
+    .swiper-slide {
+      text-align: center;
+ 
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+	
+	</style>
+	
 </head>
 
 <body>
 
-  <div id="navbar" class="animated bounceInDown">
+ <div id="navbar-mobile">
 
     <input type="checkbox" id="checkboxMenu"></input>
 
-    <span id="hamburgerSpan1" class="animated fadeIn"></span>
-    <span id="hamburgerSpan2" class="animated fadeIn"></span>
-    <span id="hamburgerSpan3" class="animated fadeIn"></span>
+    <span id="hamburgerSpan1" class="smallerHeader"></span>
+    <span id="hamburgerSpan2"></span>
+    <span id="hamburgerSpan3"></span>
 
-    <ul class="menu">
+
+    <ul class="menu-mobile">
       <li>
         <a href="#">O mně</a>
       </li>
-
-      <li >
-        <a class="mouseover" href="newsfeed.html">Newsfeed </a>
+      <li>
+        <a href="just.html">JUST NAHRIN</a>
       </li>
-
       <li>
         <a href="masaze.html">Masáže</a>
       </li>
-
       <li>
         <a href="vyziva.html">Výživa</a>
       </li>
@@ -45,72 +75,125 @@
       </li>
     </ul>
   </div>
-
-
+ <div id="navbar-web">
+  <ul class="menu-web">
+      <li>
+        <a href="#">O mně</a>
+      </li>
+      <li>
+        <a href="just.html">JUST NAHRIN</a>
+      </li>
+      <li class="menu-active">
+        <a href="masaze.html">Masáže</a>
+      </li>
+      <li>
+        <a href="vyziva.html">Výživa</a>
+      </li>
+      <li>
+        <a href="kontakt.html">Kontakt</a>
+      </li>
+    </ul>
+  </div>
   <div class="mainContainer" id="main">
+    
     <div class="logoSmallDiv">
       <img id="logoSmall" src="../img/logo.png" onclick="goHome()">
     </div>
+    <div class="secondContainer">
     <h1 class="pageHeader">Tereza Rančáková</h1>
-    
-    
-    <div class="container">
-        <div class="row3">
-            <div class="column3">
-                <div>
-                    <img src="../img/profile.png">
+	
+
+				  
+	    <div class="swiper-pagination"></div>
+						    
+	<div class="swiper-container">
+					  <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>			
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+	    <div class="paragraphWrapper">
+      <div class="paragraphWrapperBorder">
+	   <div class="row">
+                  <div class="column">
+                    <img src="../img/massage.png">
+                    <h2>Masáže</h2>
+                    <p>zdravotní i relaxační</p>
                   </div>
-                <p class="pageDescription">Jmenuji se Tereza Rančáková a jsem kvalifikovanou masérkou, nutriční specialistkou se zaměřením na psychosomatiku a odbornou poradkyní švýcarské firmy Just cs.</p>
+                  <div class="column">
+                    <img src="../img/food.png">
+                    <h2>Zdravá výživa</h2>
+                    <p>na každý den</p>
+                  </div>
+                  <div class="column">
+                    <img src="../img/justnahrin.png">
+                    <h2>Doplňky</h2>
+                    <p>Just & Nahrin</p>
+                  </div>
+                </div></div>
+				</div></div>
+				
+      <div class="swiper-slide">
+	  	    <div class="paragraphWrapper">
+      <div class="paragraphWrapperBorder">
+	  <div class="row3">
+                      <div class="column3">
 
-            </div>
-          </div>
+                          <div class="profilovka">
+                              <img src="../img/profilovka2.png">
+                            </div>
+						
+                          <p class="pageDescription">Jmenuji se Tereza Rančáková a jsem kvalifikovanou masérkou, nutriční specialistkou se zaměřením na psychosomatiku a odbornou poradkyní švýcarské firmy Just cs.</br></br>
+                          </p>
+                           
+                      </div>
+                    </div></div>
+					     </div></div>
+					
+      <div class="swiper-slide">
+	  	  	    <div class="paragraphWrapper">
+      <div class="paragraphWrapperBorder">
+	  <div class="row2">
+        <div class="column2">
 
-          
-      <div class="row">
-        <div class="column">
-          <img src="../img/massage.png" style="width:100%">
-          <h2>Masáže</h2>
-          <p>zdravotní i relaxační</p>
+          <h2> "Vše souvisí se vším"</h2>
+          <p>
+            Naše tělo reaguje na náš stravovací režim, naše psychické rozpoložení i na naši fyzickou aktivitu. Proto ke svým klientům přistupuji individuálně a snažím se jim poskytnout co možná nejvhodnější pomoc k jejich plnému zdraví.
+          </p>
         </div>
-        <div class="column">
-          <img src="../img/food.png" style="width:100%">
-          <h2>Zdravá výživa</h2>
-          <p>na každý den</p>
-        </div>
-        <div class="column no-margin-column">
-          <img src="../img/justnahrin.png" style="width:100%">
-          <h2>Doplňky</h2>
-          <p>Just & Nahrin</p>
-        </div>
-      </div>
-
-    <div class="row2">
-      <div class="column2">
-        <h2> "Vše souvisí se vším"</h2>
-        <p>
-          Naše tělo reaguje na náš stravovací režim, naše psychické rozpoložení i na naši fyzickou aktivitu. Proto ke svým klientům přistupuji individuálně a snažím se jim poskytnout co možná nejvhodnější pomoc k jejich plnému zdraví.
-        </p>
-      </div>
-    </div>      
-	
-	
-	<div class="row4">
-      <div class="column4">
-	    <h2>NAŠE ZDRAVÍ</h2>
-		<p>
-          stojí na několika základních pilířích.
-          <b>Psychická pohoda, zdravé vztahy, správné stravování, pracovní uspokojení, adekvátní fyzický pohyb a především dostatečný odpočinek</b>
-          jsou však ty hlavní.
-        </p>
-      </div>
-    </div>
+      </div> </div>
+	  </div> </div>
+	  
+	    </div>
   </div>
+	
   </div>
-
+    	<div class="pageDescription2">"Naše zdraví stojí na několika základních pilířích. <br>Zdravý životní styl, psychická pohoda, fyzická aktivita jsou však ty hlavní.."</div>
+  </div>
+</div>
   <footer>
     made by stockpile.cz
   </footer>
   <script src="../js/client.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 10000,
+        disableOnInteraction: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </body>
 
 </html>

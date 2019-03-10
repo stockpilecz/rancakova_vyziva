@@ -9,27 +9,27 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/header.css">
+   
   <link rel="stylesheet" href="../css/media.css">
   <link rel="stylesheet" href="../css/menu.css">
 </head>
 
 <body>
-  <div id="navbar" class="animated bounceInDown" >
+ <div id="navbar-mobile">
 
     <input type="checkbox" id="checkboxMenu"></input>
 
-    <span id="hamburgerSpan1"></span>
+    <span id="hamburgerSpan1" class="smallerHeader"></span>
     <span id="hamburgerSpan2"></span>
     <span id="hamburgerSpan3"></span>
 
 
-    <ul class="menu">
+    <ul class="menu-mobile">
       <li>
-        <a href="omne.html">O mně</a>
+        <a href="#">O mně</a>
       </li>
       <li>
-        <a href="newsfeed.html">Newsfeed</a>
+        <a href="just.html">JUST NAHRIN</a>
       </li>
       <li>
         <a href="masaze.html">Masáže</a>
@@ -38,14 +38,36 @@
         <a href="vyziva.html">Výživa</a>
       </li>
       <li>
-        <a href="#">Kontakt</a>
+        <a href="kontakt.html">Kontakt</a>
       </li>
     </ul>
   </div>
+ <div id="navbar-web">
+  <ul class="menu-web">
+      <li>
+        <a href="#">O mně</a>
+      </li>
+      <li>
+        <a href="just.html">JUST NAHRIN</a>
+      </li>
+      <li class="menu-active">
+        <a href="masaze.html">Masáže</a>
+      </li>
+      <li>
+        <a href="vyziva.html">Výživa</a>
+      </li>
+      <li>
+        <a href="kontakt.html">Kontakt</a>
+      </li>
+    </ul>
+  </div>
+  
+  
   <div class="mainContainer" id="main">
     <div class="logoSmallDiv">
       <img id="logoSmall" src="logo.png" onclick="goHome()">
     </div>
+	    <div class="secondContainer">
     <div class="containerContact">
       <!-- <h1 class="brand"><span>Tereza</span> Rancakova</h1> -->
       <h1 class="animated bounceInUp pageHeader">Kontakt</h1>
