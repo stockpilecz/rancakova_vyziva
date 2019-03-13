@@ -15,7 +15,7 @@
 
 <body>
 
-  <div id="navbar" class="animated bounceInDown">
+  <div id="navbar-mobile">
 
     <input type="checkbox" id="checkboxMenu"></input>
 
@@ -24,7 +24,7 @@
     <span id="hamburgerSpan3"></span>
 
 
-    <ul class="menu">
+    <ul class="menu-mobile">
       <li>
         <a href="omne.html">O mně</a>
       </li>
@@ -42,13 +42,34 @@
       </li>
     </ul>
   </div>
-  <div class="" id="tab-bar-border"></div>
+ <div id="navbar-web">
+  <ul class="menu-web">
+      <li>
+        <a href="omne.html">O mně</a>
+      </li>
+      <li>
+        <a href="just.html">JUST NAHRIN</a>
+      </li>
+      <li class="menu-active">
+        <a href="#">Masáže</a>
+      </li>
+      <li>
+        <a href="vyziva.html">Výživa</a>
+      </li>
+      <li>
+        <a href="kontakt.html">Kontakt</a>
+      </li>
+    </ul>
+  </div>
   <div class="mainContainer" id="main">
+    
     <div class="logoSmallDiv">
       <img id="logoSmall" src="../img/logo.png" onclick="goHome()">
     </div>
-    <h1 class="pageHeader" id="pageHeader">Masáže</h1>
+    <div class="secondContainer">
+    <h1 class=" pageHeader">Masáže</h1>
     <div class="paragraphWrapper">
+      <div class="paragraphWrapperBorder">
       <p id="paragraphMasaze" class="">
         Na masáž můžete přijít pro požitek z relaxace – výborná prevence fyzických i psychických potíží. Často
         ale klienti přicházejí s bolestí, zde už je zapotřebí pracovat i v dalších oblastech.
@@ -60,7 +81,10 @@
       <div class="masazeImgDiv">
         <img src="../img/masaze.jpg" />
       </div>
+      </div>
     </div>
+    
+  </div>
       <div id="tabs">
 
         <div class="box" id="first-box" onclick="displayContent(event, 'boxContent1')">
@@ -240,7 +264,7 @@
     </div>
 </div>
 
-  </div>
+</div>
   </div>
   <footer>
     made by stockpile.cz
