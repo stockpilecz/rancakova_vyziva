@@ -1,12 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Merienda:400,700&subset=latin-ext');
+/* @import url('https://fonts.googleapis.com/css?family=Abril+Fatface:400,700&subset=latin-ext'); */
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan:400,700&subset=latin-ext');
+
+
 
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Merienda', sans-serif;
+  /* font-family: 'Abril Fatface', cursive; */
+  font-family: 'Baloo Chettan', cursive;
   min-height: 100vh;
-  transform: scale(0.9);
-  transform-origin: 2 2;
+  padding-left:50px;
+  padding-right: 50px;
+  /* transform: scale(0.9);
+  transform-origin: 2 2; */
 }
 
 p {
@@ -216,10 +222,23 @@ p {
 .vyzivaContent {
   display: block;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  padding:30px;
 
 }
+.obrazek_just {
+  min-width:1200px;
+align-items: center;
+}
+.just_img {
+ display: flex;
+ display: block;
+ flex-wrap: nowrap;
+ box-sizing: border-box;
+flex-direction: column;
+}
 
+}
 
 .boxContentPrice {
   display: flex;
@@ -421,6 +440,14 @@ outline: none;
   padding: 50px;
   box-sizing: border-box;
 }
+.secondContainer_homepage_bottom {
+  min-height: 500px;
+  border-radius: 10px;
+  margin: 10px;
+  background-image: url("../img/large_portrait.jpeg");
+  padding: 50px;
+  box-sizing: border-box;
+}
 
 
 /* @media(min-width:930px){ */
@@ -536,6 +563,22 @@ outline: none;
    border-top-left-radius: 5px;
    border-top-right-radius: 5px;
     }
+
+    .column3_just {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+     
+      justify-content: center;
+      box-shadow: none;
+     border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+      }
 	
 	.column3 > p {
   padding-left: 50px;
@@ -549,9 +592,9 @@ outline: none;
 }
 
     .profilovka {
-      min-width: 300px;
-      width: 300px;
-      height: 300px;
+      min-width: 250px;
+      width: 250px;
+      height: 250px;
       position: relative;
       overflow: hidden;
       display: flex;
@@ -562,11 +605,22 @@ outline: none;
     
     .profilovka > img {
       margin: 0 auto;
-      height: 100%;
-      width: auto;
+      height: 110%;
+      width: 100%;
+    }
+    .profilovka_just > img {
+   
+      height: 300px;
+      width: 300px;
     }
  
-  
+  .p_home {
+    font-size: 22px;
+    color: #142657;
+    padding-left: 7%;
+    padding-top:10%;
+
+  }
 
 
 
@@ -590,6 +644,19 @@ outline: none;
   padding: 50px;
  
   justify-content: center;
+  display: flex;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  height: auto;
+  align-items: center;
+  box-sizing: border-box;
+  border: 3px solid #142657;
 }
 
 

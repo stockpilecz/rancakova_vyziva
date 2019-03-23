@@ -15,36 +15,59 @@
 
 <body>
 
-  <div id="navbar" class="animated bounceInDown">
 
-    <input type="checkbox" id="checkboxMenu"></input>
+    <div id="navbar-mobile">
 
-    <span id="hamburgerSpan1" class="animated fadeIn"></span>
-    <span id="hamburgerSpan2" class="animated fadeIn"></span>
-    <span id="hamburgerSpan3" class="animated fadeIn"></span>
-
-    <ul class="menu">
-      <li>
-        <a href="omne.html">O mně</a>
-      </li>
-      <li>
-        <a href="just.html">JUST NAHRIN</a>
-      </li>
-      <li>
-        <a href="masaze.html">Masáže</a>
-      </li>
-      <li>
-        <a href="#">Výživa</a>
-      </li>
-      <li>
-        <a href="kontakt.html">Kontakt</a>
-      </li>
-    </ul>
-  </div>
-  <div class="mainContainer" id="main">
-    <div class="logoSmallDiv">
-      <img id="logoSmall" src="../img/logo.png" onclick="goHome()">
+      <input type="checkbox" id="checkboxMenu"></input>
+  
+      <span id="hamburgerSpan1" class="smallerHeader"></span>
+      <span id="hamburgerSpan2"></span>
+      <span id="hamburgerSpan3"></span>
+  
+  
+      <ul class="menu-mobile">
+        <li>
+          <a href="#">O mně</a>
+        </li>
+        <li>
+          <a href="just.html">JUST NAHRIN</a>
+        </li>
+        <li>
+          <a href="masaze.html">Masáže</a>
+        </li>
+        <li>
+          <a href="vyziva.html">Výživa</a>
+        </li>
+        <li>
+          <a href="kontakt.html">Kontakt</a>
+        </li>
+      </ul>
     </div>
+   <div id="navbar-web">
+    <ul class="menu-web">
+        <li>
+          <a href="#">O mně</a>
+        </li>
+        <li>
+          <a href="just.html">JUST NAHRIN</a>
+        </li>
+        <li class="menu-active">
+          <a href="masaze.html">Masáže</a>
+        </li>
+        <li>
+          <a href="vyziva.html">Výživa</a>
+        </li>
+        <li>
+          <a href="kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mainContainer" id="main">
+      
+      <div class="logoSmallDiv">
+        <img id="logoSmall" src="../img/logo.png" onclick="goHome()">
+      </div>
+      <div class="secondContainer">
     <h1 class="pageHeader">Výživa</h1>
 
     <div class="container">
@@ -80,7 +103,7 @@
       </p>
     </div>
     </div>
-  </div>
+    </div>
   <footer>
     made by stockpile.cz
   </footer>
