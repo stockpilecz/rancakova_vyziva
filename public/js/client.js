@@ -29,6 +29,7 @@ function displayContent(e, masaz) {
   for (i = 0; i < box.length; i++) {
     box[i].className = box[i].className.replace(" active", "");
   }
+  const masazID = document.getElementById(masaz);
 
   const masazID = document.getElementById(masaz);
   
