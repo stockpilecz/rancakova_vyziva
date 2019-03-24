@@ -1,7 +1,5 @@
-var navbar = document.getElementById('navbar');
 var logoSmall = document.getElementById('logoSmall');
 var pageHeader = document.getElementById('pageHeader');
-var checkboxMenu = document.getElementById('checkboxMenu');
 const tabBar = document.getElementById('tab-bar-border');
 const tabs = document.getElementById('tabs');
 const hambugerMenu = document.getElementById('hambugerMenu');
@@ -31,8 +29,7 @@ function displayContent(e, masaz) {
   for (i = 0; i < box.length; i++) {
     box[i].className = box[i].className.replace(" active", "");
   }
-
-  const masazID = document.getElementById(masaz);
+  const masazID = document.getElementById(masaz); 
   
   masazID.style.display = "block";
   tabs.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
