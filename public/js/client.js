@@ -4,6 +4,8 @@ var pageHeader = document.getElementById('pageHeader');
 var checkboxMenu = document.getElementById('checkboxMenu');
 const tabBar = document.getElementById('tab-bar-border');
 const tabs = document.getElementById('tabs');
+const hambugerMenu = document.getElementById('hambugerMenu');
+const menuMobile = document.getElementById('mobileMenuDiv');
 
 //funcke na presmerovani po kliknuti na male logo na stranku o omne
 function goHome() {
@@ -35,4 +37,15 @@ function displayContent(e, masaz) {
   masazID.style.display = "block";
   tabs.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   e.currentTarget.className += " active";
+}
+
+function revealMenu () {
+  if (menuMobile.className.includes('showMobileMenu')) {
+    hambugerMenu.className = "";
+    menuMobile.className = "hideMobile";
+    return;
+  }
+
+  hambugerMenu.className = "hamburgerMenuChecked";
+  menuMobile.className = "showMobileMenu";
 }
