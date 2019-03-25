@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tereza Rancakova</title>
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/media.css">
+</head>
+
+<body>
+
+  <div id="navbar-mobile">
+    <button id="hambugerMenu" onclick="revealMenu()">
+      <span id="hamburgerSpan1"></span>
+      <span id="hamburgerSpan2"></span>
+      <span id="hamburgerSpan3"></span>
+    </button>
+    <div id="mobileMenuDiv" class="hideMobile">
+      <ul id="menu-mobile" >
+        <li>
+          <a href="omne.html">O mně</a>
+        </li>
+        <li>
+          <a href="just.html">JUST & NAHRIN</a>
+        </li>
+        <li >
+          <a class="menu-active" href="#">Masáže</a>
+        </li>
+        <li>
+          <a href="vyziva.html">Výživa</a>
+        </li>
+        <li>
+          <a href="kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="navbar-web">
+    <ul class="menu-web">
+      <li>
+        <a href="omne.html">O mně</a>
+      </li>
+      <li>
+        <a href="just.html">JUST NAHRIN</a>
+      </li>
+      <li class="menu-active">
+        <a href="#">Masáže</a>
+      </li>
+      <li>
+        <a href="vyziva.html">Výživa</a>
+      </li>
+      <li>
+        <a href="kontakt.html">Kontakt</a>
+      </li>
+    </ul>
+  </div>
+ 
+  <div class="mainContainer" id="main">
+    <div class="logoSmallDiv">
+      <!-- <img id="logoSmall" src="../img/logo.png" onclick="goHome()"> -->
+    </div>
+    <div class="secondContainer">
+      <h1 class=" pageHeader">Masáže</h1>
+      <div class="paragraphWrapper">
+        <div class="paragraphWrapperBorder">
+          <p id="paragraphMasaze" class="">
+            Na masáž můžete přijít pro požitek z relaxace – výborná prevence fyzických i psychických potíží. Často
+            ale klienti přicházejí s bolestí, zde už je zapotřebí pracovat i v dalších oblastech.
+            Když klient přichází poprvé, většinou provedu diagnostiku přes reflexní body na ploskách nohou. S nimi
+            pracuji někdy i během masáže. Což nám pomůže diagnostikovat i možné potíže například s jednotlivými
+            orgány, nebo napomůže identifikovat zablokované místo na zádech.
+            S klientem ráda pracuji komplexně, ale vždy s ohledem na jeho přání.
+          </p>
+          <div class="masazeImgDiv">
+            <img src="../img/masaze.jpg" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="tabs">
+      <div class="box" id="first-box" onclick="displayContent(event, 'boxContent1')">
+        <h2>Záda a šíje</h2>
+      </div>
+      <div class="box" onclick="displayContent(event, 'boxContent2')">
+        <h2>Ruce</h2>
+      </div>
+      <div class="box" onclick="displayContent(event, 'boxContent3')">
+        <h2>Nohy</h2>
+      </div>
+      <div class="box" onclick="displayContent(event, 'boxContent4')">
+        <h2>Břicho</h2>
+      </div>
+      <div class="box" onclick="displayContent(event, 'boxContent5')">
+        <h2>Lymfatická masáž</h2>
+      </div>
+    </div>
+    <div id="wrapperBoxContent">
+      <div class="boxContent" id="boxContent1">
+        <div>
+          <h1>Záda a šíje</h1>
+          <ul class="massageList">
+            <li>Uvolnění nahromaděného stresového napětí a ztuhlého svalstva</li>
+            <li>Uvolnění fyzického i duševního napětí - duševní hygiena</li>
+            <li>Zmírnění či odstranění bolestí hlavy a zad</li>
+          </ul>
+          <div class="boxContentPrice">
+            <span>Záda + šíje (cca 50 minut)</span>
+            <span class="price"><strong>400 Kč</strong></span>
+          </div>
+          <div class="boxContentPrice">
+            <span>Relaxační masáž celého těla (cca 1 hodina a 40 minut)</span>
+            <span class="price"><strong>750 Kč</strong></span>
+          </div>
+          <div class="boxContentPrice">
+            <span>Záda (cca 30 minut)</span>
+            <span class="price"><strong>250 Kč</strong></span>
+          </div>
+          <div class="boxContentPrice">
+            <span>Šíje (cca 25 minut)</span>
+            <span class="price"><strong>180 Kč</strong></span>
+          </div>
+          <div class="masazeInfo">
+            <p>Různé balíčky lze sestavit na přání klienta.</p>
+            <p>Masáže v pohodlí Vašeho domova + 50,- do 10km od MB (případně po dohodě)</p>
+            <p>Pro obyvatele Bukovna je dopravné zdarma</p>
+          </div>
+        </div>
+      </div>
+      <div class="boxContent" id="boxContent2">
+        <div>
+          <h1>Ruce</h1>
+          <ul class="massageList">
+            <li>Prevence karpálního tunelu</li>
+            <li>Prevence a zmírnění tenisového a golfového loktu</li>
+            <li>Posílení kloubů a šlach</li>
+            <li>Úleva unaveným rukám</li>
+          </ul>
+          <div class="boxContentPrice">
+            <span>Celá horní končetina (cca 50 minut)</span>
+            <span class="price"><strong>400 Kč</strong></span>
+          </div>
+          <div class="masazeInfo">
+            <p>Různé balíčky lze sestavit na přání klienta.</p>
+            <p>Masáže v pohodlí Vašeho domova + 50,- do 10km od MB (případně po dohodě)</p>
+            <p>Pro obyvatele Bukovna je dopravné zdarma</p>
+          </div>
+        </div>
+      </div>
+      <div class="boxContent" id="boxContent3">
+        <div>
+          <h1>Nohy</h1>
+          <ul class="massageList">
+            <li>Úleva unaveným a oteklým nohám</li>
+            <li>Uvolnění namoženého svalstva, posílení pohybového aparátu</li>
+            <li>Omezení rizika tvorby civilizačních chorob, které jsou spojeny s poruchami krevního oběhu</li>
+          </ul>
+
+          <div class="boxContentPrice">
+            <span>Celá dolní končetina včetně hýždí (cca 1 hodina a 10 minut)</span>
+            <span class="price"><strong>600 Kč</strong></span>
+          </div>
+          <div class="masazeInfo">
+            <p>Různé balíčky lze sestavit na přání klienta.</p>
+            <p>Masáže v pohodlí Vašeho domova + 50,- do 10km od MB (případně po dohodě)</p>
+            <p>Pro obyvatele Bukovna je dopravné zdarma</p>
+          </div>
+        </div>
+      </div>
+      <div class="boxContent" id="boxContent4">
+        <div>
+          <h1>Břicho</h1>
+          <ul class="massageList">
+            <li>Pomáhá harmonizovat zažívání, vhodné při častých zácpách a nadýmání</li>
+            <li>Napomáhá zmírnění strií např. po porodu</li>
+            <li>Zlepšuje funkci vnitřních orgánů - slezina, žlučník, žaludek, játra atd.</li>
+          </ul>
+          <div class="boxContentPrice">
+            <span>20 minut</span>
+            <span class="price"><strong>200 Kč</strong></span>
+          </div>
+          <div class="masazeInfo">
+            <p>Různé balíčky lze sestavit na přání klienta.</p>
+            <p>Masáže v pohodlí Vašeho domova + 50,- do 10km od MB (případně po dohodě)</p>
+            <p>Pro obyvatele Bukovna je dopravné zdarma</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="boxContent" id="boxContent5">
+        <div>
+          <h1>Ruční lymfomasáž dolních končetin s aktivací lymfatickýh uzlin</h1>
+          <p>
+            Lymfatický systém se skládá z lymfatických uzlin, cév a orgánů. Lymfatický systém nám v těle bojuje s
+            infekcemi, absorbuje přebytečné tekutiny, tuky a odvádí nečistoty z těla ven. Jeho špatná funkce se
+            projevuje různými způsoby. Začátky můžeme sledovat přes časté nachlazení, únavu až po bolest kloubů
+            a otoky. Příčin zhoršené funkce lymfatického systému může být několik. Ať už genetická predispozice,
+            málo pohybu, špatná strava či úraz.
+          </p>
+          <p>
+            Lymfatická masáž pomáhá také v boji s celulitidou. Celulitida vzniká hromaděním tukové tkáně a
+            stárnutím podkožního vaziva. Vedle hormonů hraje v tvorbě celulitidy velkou roli náš životní styl, sedavé
+            zaměstnání, málo pohybu či špatná strava.
+          </p>
+
+          <p>
+            Kdo se rozhodne po lymfomasáže, je vhodné začít s prvními 4 masážemi po 2 až 3 dnech, poté 6
+            masáží po 5 až 7 dnech. Pak stačí udržovací masáže, jednou za 1 až 2 měsíce.
+          </p>
+
+          <p style="margin-bottom: 50px">
+            Masáž se provádí velmi jemnými pohyby, pod určitým tlakem a směrem. Doba masáže se odvíjí od
+            individuálních potřeb klienta. Většinou trvá cca hodinu a potom zábal či kompresní fixace.
+          </p>
+          <h2>Kdy masáž není vhodná</h2>
+          <ul class="massageList">
+            <li>Otoky způsobené onemocněním srdce, ledvin nebo jater</li>
+            <li>Akutní virové onemocnění nebo bakteriální onemocnění</li>
+            <li>Akutní žilní onemocnění</li>
+            <li>Lupénka v akutním stavu</li>
+            <li>Menstruace</li>
+            <li>Těhotenství</li>
+          </ul>
+
+          <h2>Co dělat před a po masáži</h2>
+          <ul class="massageList">
+            <li>Před masáží je vhodné se osprchovat, jelikož po masáži byste se neměli 6 hodin mýt</li>
+            <li>Po masáži byste měli zvýšit přísun tekutin (čistá voda či bylinné čaje)</li>
+            <li>Vhodné je také zvýšit tělesnou aktivitu, nejvhodnější je chůze a plavání. Naopak se nedoručuje
+              běh a jiné otřesové pohyby.</li>
+            <li>Pokud zvolíte masáž bez anticelulitidového zábalu přineste si s sebou kompresní punčochy
+              (pokud vlastníte) nebo dvě obinadla.</li>
+            <li>Tak jako po každé masáži by měl následovat odpočinek a klid</li>
+            <li>Pokud chcete přispět ke správné detoxikaci těla, doporučuji zařadit do jídelníčku bylinky</li>
+          </ul>
+
+
+          <div class="boxContentPrice">
+            <span>Cca 70 minut</span>
+            <span class="price"><strong>700 Kč</strong></span>
+          </div>
+          <div class="boxContentPrice">
+            <span>Anticelulitidový zábal</span>
+            <span class="price"><strong>100 Kč</strong></span>
+          </div>
+          <div class="masazeInfo">
+            <p>Různé balíčky lze sestavit na přání klienta.</p>
+            <p>Masáže v pohodlí Vašeho domova + 50,- do 10km od MB (případně po dohodě)</p>
+            <p>Pro obyvatele Bukovna je dopravné zdarma</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <footer>
+    made by stockpile.cz
+  </footer>
+  <script src="../js/client.js" ></script>
+</body>
+
+</html>
